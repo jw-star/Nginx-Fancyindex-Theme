@@ -57,7 +57,7 @@ fancyindex_name_length 255;
 
 ## 示例
 ### 已汉化标题，搜索栏、去掉底部的链接:
-![主题已修改](https://i.loli.net/2021/03/18/ftVEJIDeKynrbTu.png)
+![主题已修改](https://i.loli.net/2021/03/18/XFTVvgNbKouDs5M.png)
 
 ---
 
