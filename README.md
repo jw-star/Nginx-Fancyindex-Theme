@@ -16,7 +16,7 @@ ngnix添加 fancyindex 模块: [here](https://github.com/aperezdc/ngx-fancyindex
           # include   /www/wwwroot/download.gojw.xyz/fancyindex/fancyindex.conf;
           include /www/wwwroot/download.gojw.xyz/Nginx-Fancyindex-Theme/fancyindex.conf;
           root /www/wwwroot/download.gojw.xyz/;
-          charset utf-8,gbk; #展示中文文件名
+          charset utf-8,gbk; #解决中文乱码
   }   
 ```
 
@@ -54,8 +54,8 @@ fancyindex_name_length 255;
 
 > Reference: [H5BP Nginx Server Config](https://github.com/h5bp/server-configs-nginx/blob/master/nginx.conf)
 
-## Examples
-### 汉化标题、去掉底部的链接:
+## 示例
+### 已汉化标题，搜索栏、去掉底部的链接:
 ![主题已修改](https://i.loli.net/2021/03/18/ftVEJIDeKynrbTu.png)
 
 ---
