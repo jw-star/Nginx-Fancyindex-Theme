@@ -27,78 +27,27 @@ A standard config looks something like this (use `-light` for the default light 
 ```bash
 fancyindex on;
 fancyindex_localtime on;
+#时间格式 	2021-03-17 06:09:12
+fancyindex_time_format "%Y-%m-%d %T";
+#时间倒序
+fancyindex_default_sort date_desc;
+
 fancyindex_exact_size off;
 # Specify the path to the header.html and foother.html files (server-wise)
-fancyindex_header "/Nginx-Fancyindex-Theme-light/header.html";
-fancyindex_footer "/Nginx-Fancyindex-Theme-light/footer.html";
+fancyindex_header "/Nginx-Fancyindex-Theme/light-Theme/header.html";
+fancyindex_footer "/Nginx-Fancyindex-Theme/light-Theme/footer.html";
+#fancyindex_header "/Nginx-Fancyindex-Theme/dark-Theme/header.html";
+#fancyindex_footer "/Nginx-Fancyindex-Theme/dark-Theme/footer.html";
 # Ignored files will not show up in the directory listing, but will still be public.
-fancyindex_ignore "examplefile.html";
+fancyindex_ignore "dow.py";
+fancyindex_ignore "fancyindex";
 # Making sure folder where these files are do not show up in the listing.
-fancyindex_ignore "Nginx-Fancyindex-Theme-light";
+fancyindex_ignore "Nginx-Fancyindex-Theme";
 # Maximum file name length in bytes, change as you like.
 fancyindex_name_length 255;
+
 ```
 
-If you want to conserve a few more bytes in network transmissions enable gzip on the served assets.
-
-```bash
-# Enable gzip compression.
-  gzip on;
-
-  # Compression level (1-9).
-  # 5 is a perfect compromise between size and CPU usage, offering about
-  # 75% reduction for most ASCII files (almost identical to level 9).
-  gzip_comp_level    5;
-
-  # Don't compress anything that's already small and unlikely to shrink much
-  # if at all (the default is 20 bytes, which is bad as that usually leads to
-  # larger files after gzipping).
-  gzip_min_length    256;
-
-  # Compress data even for clients that are connecting to us via proxies,
-  # identified by the "Via" header (required for CloudFront).
-  gzip_proxied       any;
-
-  # Tell proxies to cache both the gzipped and regular version of a resource
-  # whenever the client's Accept-Encoding capabilities header varies;
-  # Avoids the issue where a non-gzip capable client (which is extremely rare
-  # today) would display gibberish if their proxy gave them the gzipped version.
-  gzip_vary          on;
-
-  # Compress all output labeled with one of the following MIME-types.
-  gzip_types
-    application/atom+xml
-    application/javascript
-    application/json
-    application/ld+json
-    application/manifest+json
-    application/rss+xml
-    application/vnd.geo+json
-    application/vnd.ms-fontobject
-    application/x-font-ttf
-    application/x-web-app-manifest+json
-    application/xhtml+xml
-    application/xml
-    font/opentype
-    image/bmp
-    image/svg+xml
-    image/x-icon
-    text/cache-manifest
-    text/css
-    text/plain
-    text/vcard
-    text/vnd.rim.location.xloc
-    text/vtt
-    text/x-component
-    text/x-cross-domain-policy;
-  # text/html is always compressed by gzip module
-
-  # This should be turned on if you are going to have pre-compressed copies (.gz) of
-  # static files available. If not it should be left off as it will cause extra I/O
-  # for the check. It is best if you enable this in a location{} block for
-  # a specific directory, or on an individual server{} level.
-  # gzip_static on;
-```
 
 > Reference: [H5BP Nginx Server Config](https://github.com/h5bp/server-configs-nginx/blob/master/nginx.conf)
 
