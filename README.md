@@ -1,6 +1,5 @@
 # Nginx-Fancyindex-Theme
-A responsive theme for [Nginx](https://www.nginx.org/) Fancyindex module. Minimal, modern and simple.
-Comes with a search form, aims to handle thousands of files without any problems.
+Nginx Fancyindex模块的响应主题。简约、现代、简约。带有一个搜索表单，旨在处理数千个文件没有任何问题。
 
 ngnix添加 fancyindex 模块: [here](https://github.com/aperezdc/ngx-fancyindex).
 
