@@ -3,9 +3,6 @@ Nginx Fancyindex模块的响应主题。简约、现代、简约。带有一个�
 
 ngnix添加 fancyindex 模块: [here](https://github.com/aperezdc/ngx-fancyindex).
 
-## Install Fancyindex Module
-
-> Reference: [Nginx-Browse-Folder-Config](http://lanffy.github.io/2017/12/27/Nginx-Browse-Folder-Config)
 
 ## Usage
 
