@@ -10,6 +10,7 @@ ngnix添加 fancyindex 模块: [here](https://github.com/aperezdc/ngx-fancyindex
    宝塔nginx安装fancyindex模块方式:[宝塔nginx安装方式](https://www.bt.cn/bbs/thread-48398-1-1.html)
 2. clone项目到本地
 3. 修改 nginx 配置文件 
+4. 修改fancyindex/template.h，汉化 filename ,date ,fiesize
 
 ```bash
   location / { 
