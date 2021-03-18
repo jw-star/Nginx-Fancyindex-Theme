@@ -6,11 +6,20 @@ ngnix添加 fancyindex 模块: [here](https://github.com/aperezdc/ngx-fancyindex
 
 ## Usage
 
-1. Make sure you have the fancyindex module compiled with nginx, either by compiling it yourself or installing nginx via the full distribution (paquet ``nginx-extras``).
-2. Include the content of [fancyindex.conf](fancyindex.conf) in your location directive (``location / {.....}``) in your nginx config (usually ``nginx.conf``).
-3. Move the ``Nginx-Fancyindex-Theme/`` folder to the root of the site directory.
-4. Restart/reload nginx.
-5. Check that it's working, and enjoy!
+1. 确保您使用nginx编译fancyindex模块，可以自己编译它，或者通过完整发行版（paquet nginx extras）安装nginx。
+   宝塔nginx安装fancyindex模块方式:[宝塔nginx安装方式](https://www.bt.cn/bbs/thread-48398-1-1.html)
+2. clone项目到本地
+3. 修改 nginx 配置文件 
+'''bash
+  location / { 
+          # include   /www/wwwroot/download.gojw.xyz/fancyindex/fancyindex.conf;
+          include /www/wwwroot/download.gojw.xyz/Nginx-Fancyindex-Theme/fancyindex.conf;
+          root /www/wwwroot/download.gojw.xyz/;
+          charset utf-8,gbk; #展示中文文件名
+  }   
+'''
+5. Restart/reload nginx.
+6. Check that it's working, and enjoy!
 
 ## Configuration
 
