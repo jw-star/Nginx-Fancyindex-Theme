@@ -2,11 +2,7 @@
 A responsive theme for [Nginx](https://www.nginx.org/) Fancyindex module. Minimal, modern and simple.
 Comes with a search form, aims to handle thousands of files without any problems.
 
-The fancyindex module can be found [here](https://github.com/aperezdc/ngx-fancyindex).
-
-And Chinese manual(中文使用手册):[Nginx浏览目录配置及美化](https://lanffy.github.io/2017/12/27/Nginx-Browse-Folder-Config)
-
-[![made-for-nginx](https://img.shields.io/badge/Made%20for-nginx-1f425f.svg)](https://www.nginx.org/)
+ngnix添加 fancyindex 模块: [here](https://github.com/aperezdc/ngx-fancyindex).
 
 ## Install Fancyindex Module
 
